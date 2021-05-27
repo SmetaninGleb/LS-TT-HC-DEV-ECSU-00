@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911d3e0e745429a4bb39b08f7fa4b065, type: 3}
+  m_Name: UIConfiguration
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 4966279377268101528, guid: 6f6adac7921aa8a49b91b9ccbee7e537, type: 3}
+  _tapToStart: {fileID: 5525731104423691057, guid: b006be9101c7ecf48bcc91a8dc1e7acb, type: 3}
+  _defeat: {fileID: 4454341862103345503, guid: ba655df2cc1b02740ac92d1a8ef73874, type: 3}
+  _win: {fileID: 6060990208793045997, guid: 7a8f3f78d68439f4e857795779053236, type: 3}
+  _onGame: {fileID: 2944901896077792500, guid: 525bbfd8f6acda549b61f2d6548dc634, type: 3}

@@ -9,6 +9,7 @@ namespace Systems
     {
         private EcsFilter<SpawnTimeTrackerComponent> _spawnTimeTrackerFilter;
         private EcsFilter<SpawnerComponent> _spawnerFilter;
+        private EcsFilter<StartGameTrackerComponent> _startFilter; 
 
         private SpawnConfiguration _spawnConfiguration;
         private EnemyTypesContainer _enemyTypesContainer;
@@ -19,17 +20,20 @@ namespace Systems
 
         public void Run()
         {
-            float currentTime = Time.timeSinceLevelLoad;
-            ref float lastSpawnTime = ref _spawnTimeTrackerFilter.Get1(0).lastSpawnTime;
-            
-            if(isTimeToSpawn(ref currentTime, ref lastSpawnTime))
+            if (!_startFilter.IsEmpty())
             {
-                lastSpawnTime = Time.timeSinceLevelLoad;
-                Spawn();
+                float currentTime = Time.timeSinceLevelLoad;
+                ref float lastSpawnTime = ref _spawnTimeTrackerFilter.Get1(0).LastSpawnTime;
+
+                if (IsTimeToSpawn(ref currentTime, ref lastSpawnTime))
+                {
+                    lastSpawnTime = Time.timeSinceLevelLoad;
+                    Spawn();
+                }
             }
         }
 
-        private bool isTimeToSpawn(ref float currentTime, ref float lastSpawnTime)
+        private bool IsTimeToSpawn(ref float currentTime, ref float lastSpawnTime)
         {
             return currentTime - lastSpawnTime >= _spawnConfiguration.SpawnTimeRange;
         }
@@ -44,10 +48,11 @@ namespace Systems
                 newEnemyType.EnemyObject,
                 spawnPosition,
                 Quaternion.identity);
+            newEnemyObject.GetComponent<EnemyMonoBehaviour>().Health = newEnemyType.HealthPoints;
             EcsEntity newEnemy = _world.NewEntity();
             ref EnemyComponent enemyComponent = ref newEnemy.Get<EnemyComponent>();
-            enemyComponent.enemyObject = newEnemyObject;
-            enemyComponent.enemyType = newEnemyType;
+            enemyComponent.EnemyObject = newEnemyObject;
+            enemyComponent.EnemyType = newEnemyType;
         }
     }
 }

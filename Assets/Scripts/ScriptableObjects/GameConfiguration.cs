@@ -12,7 +12,10 @@ namespace ScriptableObjects
     {
         [SerializeField]
         private Vector3 startGamePosition;
+        [SerializeField]
+        private float timeToWin;
 
         public Vector3 StartGamePosition => startGamePosition;
+        public float TimeToWin => timeToWin;
     }
 }

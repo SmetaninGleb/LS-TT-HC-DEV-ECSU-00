@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67c07ede2182c74e8953dbd0711305f, type: 3}
   m_Name: FieldConfiguration
   m_EditorClassIdentifier: 
-  startFieldPosition: {x: 0, y: -0.5, z: 0}
+  startFieldPosition: {x: 0, y: 0, z: 0}
   gameField: {fileID: 3538680474811387146, guid: 3567b9439aac22e49b6a0ad69615b305, type: 3}

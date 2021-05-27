@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyObject: {fileID: 224934035383666693, guid: d49420474ac1ea94c955932080b0596a, type: 3}
   _enemySpeed: 2
+  _healthPoints: 100

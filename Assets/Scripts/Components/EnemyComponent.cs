@@ -5,7 +5,7 @@ namespace Components
 {
     struct EnemyComponent
     {
-        public EnemyType enemyType;
-        public GameObject enemyObject;
+        public EnemyType EnemyType;
+        public GameObject EnemyObject;
     }
 }

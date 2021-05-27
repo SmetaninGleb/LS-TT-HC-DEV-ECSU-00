@@ -9,7 +9,7 @@ namespace Systems
         public void Init()
         {
             EcsEntity spawnTimeTracker = _world.NewEntity();
-            spawnTimeTracker.Get<SpawnTimeTrackerComponent>().lastSpawnTime = 0;
+            spawnTimeTracker.Get<SpawnTimeTrackerComponent>().LastSpawnTime = 0;
         }
     }
 }

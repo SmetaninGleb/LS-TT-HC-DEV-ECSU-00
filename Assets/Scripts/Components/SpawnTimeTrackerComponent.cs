@@ -3,6 +3,6 @@ namespace Components
 {
     struct SpawnTimeTrackerComponent
     {
-        public float lastSpawnTime;
+        public float LastSpawnTime;
     }
 }
