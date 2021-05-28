@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShootingConfiguration
   m_EditorClassIdentifier: 
   _projectileSpawnHeight: 20
-  _reloadTime: 0.1
+  _reloadTime: 0.5

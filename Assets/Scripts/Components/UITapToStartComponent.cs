@@ -2,7 +2,7 @@
 
 namespace Components
 {
-    struct TapToStartComponent
+    struct UITapToStartComponent
     {
         public GameObject TapToStartObject;
     }

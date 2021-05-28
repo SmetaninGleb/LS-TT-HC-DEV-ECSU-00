@@ -8,27 +8,29 @@ namespace Systems
     class WinCheckingSystem : IEcsRunSystem
     {
         private EcsFilter<WinTrackerComponent> _winFilter;
-        private EcsFilter<StartGameTrackerComponent> _startGameFilter;
+        private EcsFilter<IsOnGameTrackerComponent> _isOnGameTrackerFilter;
         private GameConfiguration _gameConfigurations;
         private EcsWorld _world;
 
         public void Run()
         {
-            if (_winFilter.IsEmpty() && Time.timeSinceLevelLoad - _startGameFilter.Get1(0).StartTime > _gameConfigurations.TimeToWin)
+            if (!_isOnGameTrackerFilter.IsEmpty())
             {
-                EcsEntity winEntity = _world.NewEntity();
-                winEntity.Get<WinTrackerComponent>();
-                winEntity.Get<FinishGameTrackerComponent>();
-                DeleteStartGameEntities();
-                
+                if (_winFilter.IsEmpty() && Time.timeSinceLevelLoad - _isOnGameTrackerFilter.Get1(0).StartTime > _gameConfigurations.TimeToWin)
+                {
+                    EcsEntity winEntity = _world.NewEntity();
+                    winEntity.Get<WinTrackerComponent>();
+                    DeleteStartGameEntities();
+
+                }
             }
         }
 
         private void DeleteStartGameEntities()
         {
-            foreach (var index in _startGameFilter)
+            foreach (var index in _isOnGameTrackerFilter)
             {
-                _startGameFilter.GetEntity(index).Destroy();
+                _isOnGameTrackerFilter.GetEntity(index).Destroy();
             }
         }
     }

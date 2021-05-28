@@ -8,11 +8,11 @@ namespace Systems
     class MoveEnemySystem : IEcsRunSystem
     {
         private EcsFilter<EnemyComponent> _enemyFilter;
-        private EcsFilter<StartGameTrackerComponent> _startFilter;
+        private EcsFilter<IsOnGameTrackerComponent> _isOnGameFilter;
 
         public void Run()
         {
-            if (!_startFilter.IsEmpty())
+            if (!_isOnGameFilter.IsEmpty())
             {
                 foreach (var index in _enemyFilter)
                 {

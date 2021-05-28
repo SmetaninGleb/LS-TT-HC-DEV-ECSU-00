@@ -10,7 +10,7 @@ namespace Systems
         private EcsFilter<RaycastHitComponent> _raycastHitFilter;
         private EcsFilter<NextProjectileComponent> _nextProjectileFilter;
         private EcsFilter<ReloadTimeTrackerComponent> _reloadTimeFilter;
-        private EcsFilter<StartGameTrackerComponent> _startCheckingFilter;
+        private EcsFilter<IsOnGameTrackerComponent> _isOnGameCheckingFilter;
         private ShootingConfiguration _projectilesConfiguration;
         private EcsWorld _world;
 
@@ -44,7 +44,7 @@ namespace Systems
 
         private bool canShot()
         {
-            if (_startCheckingFilter.IsEmpty())
+            if (_isOnGameCheckingFilter.IsEmpty())
             {
                 return false;
             }

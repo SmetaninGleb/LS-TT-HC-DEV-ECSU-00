@@ -1,7 +1,7 @@
 ﻿
 namespace Components
 {
-    struct StartGameTrackerComponent
+    struct IsOnGameTrackerComponent
     {
         public float StartTime;
     }

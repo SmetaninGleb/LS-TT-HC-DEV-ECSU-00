@@ -9,7 +9,7 @@ namespace Systems
     {
         private EcsFilter<SpawnTimeTrackerComponent> _spawnTimeTrackerFilter;
         private EcsFilter<SpawnerComponent> _spawnerFilter;
-        private EcsFilter<StartGameTrackerComponent> _startFilter; 
+        private EcsFilter<IsOnGameTrackerComponent> _isOnGameTrackerFilter; 
 
         private SpawnConfiguration _spawnConfiguration;
         private EnemyTypesContainer _enemyTypesContainer;
@@ -20,7 +20,7 @@ namespace Systems
 
         public void Run()
         {
-            if (!_startFilter.IsEmpty())
+            if (!_isOnGameTrackerFilter.IsEmpty())
             {
                 float currentTime = Time.timeSinceLevelLoad;
                 ref float lastSpawnTime = ref _spawnTimeTrackerFilter.Get1(0).LastSpawnTime;

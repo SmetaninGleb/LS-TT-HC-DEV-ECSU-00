@@ -7,7 +7,8 @@ namespace Systems
     class DefeatCheckingSystem : IEcsRunSystem
     {
         private EcsFilter<DefeatFieldComponent> _defeatFieldFilter;
-        private EcsFilter<StartGameTrackerComponent> _startGameTrackerFilter;
+        private EcsFilter<IsOnGameTrackerComponent> _isOnGameTrackerFilter;
+        private EcsFilter<DefeatTrackerComponent> _defeatTrackerFilter;
         private EcsWorld _world;
 
         public void Run()
@@ -21,20 +22,19 @@ namespace Systems
                 }
             }
 
-            if (isDefeat)
+            if (isDefeat && _defeatTrackerFilter.IsEmpty() && !_isOnGameTrackerFilter.IsEmpty())
             {
                 EcsEntity defeatEntity = _world.NewEntity();
                 defeatEntity.Get<DefeatTrackerComponent>();
-                defeatEntity.Get<FinishGameTrackerComponent>();
-                DeleteStartGameTrackerComponent();
+                DeleteIsOnGameTrackerComponent();
             }
         }
 
-        private void DeleteStartGameTrackerComponent()
+        private void DeleteIsOnGameTrackerComponent()
         {
-            foreach (var index in _startGameTrackerFilter)
+            foreach (var index in _isOnGameTrackerFilter)
             {
-                _startGameTrackerFilter.GetEntity(index).Destroy();
+                _isOnGameTrackerFilter.GetEntity(index).Destroy();
             }
         }
     }

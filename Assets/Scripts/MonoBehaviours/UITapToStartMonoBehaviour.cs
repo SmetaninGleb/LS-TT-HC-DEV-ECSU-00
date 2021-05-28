@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 namespace MonoBehaviours
 {
-    class TapToStartMonoBehaviour : MonoBehaviour, IPointerDownHandler//, IPointerUpHandler
+    class UITapToStartMonoBehaviour : MonoBehaviour, IPointerDownHandler//, IPointerUpHandler
     {
         public bool IsTapped;
 
