@@ -17,7 +17,7 @@ namespace Systems
             if (_nextProjectileFiter.IsEmpty())
             {
                 EcsEntity nextProjectileEntity = _world.NewEntity();
-                int randomProjectileTypeIndex = Random.RandomRange(0, _projectileTypeContainter.ProjectileTypes.Length);
+                int randomProjectileTypeIndex = Random.Range(0, _projectileTypeContainter.ProjectileTypes.Length);
                 nextProjectileEntity.Get<NextProjectileComponent>().ProjectileType = _projectileTypeContainter.ProjectileTypes[randomProjectileTypeIndex];
             }
         }

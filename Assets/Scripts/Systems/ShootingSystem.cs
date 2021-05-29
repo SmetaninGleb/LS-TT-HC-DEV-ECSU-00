@@ -25,7 +25,7 @@ namespace Systems
                     _nextProjectileFilter.GetEntity(0).Destroy();
                     Vector3 projectilePosition = hit.point + Vector3.up * _projectilesConfiguration.ProjectileSpawnHeight;
                     GameObject projectileObject = GameObject.Instantiate(projectileType.ProjectileObject, projectilePosition, Quaternion.identity);
-                    projectileObject.GetComponent<Rigidbody>().AddForce(Vector3.down * projectileType.ForceMultiplier, ForceMode.Impulse);
+                    projectileObject.GetComponent<Rigidbody>().AddForce(Vector3.down * projectileType.FlightForceMultiplier, ForceMode.Impulse);
                     EcsEntity projectileEntity = _world.NewEntity();
                     ref ProjectileComponent projectileComponent = ref projectileEntity.Get<ProjectileComponent>();
                     projectileComponent.ProjectileObject = projectileObject;

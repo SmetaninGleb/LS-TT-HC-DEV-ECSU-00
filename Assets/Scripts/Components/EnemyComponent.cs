@@ -1,5 +1,6 @@
 ﻿using ScriptableObjects;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Components
 {
@@ -7,5 +8,6 @@ namespace Components
     {
         public EnemyType EnemyType;
         public GameObject EnemyObject;
+        public NavMeshAgent EnemyNavMeshAgent;
     }
 }

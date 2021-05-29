@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8443227395537544098}
   - component: {fileID: 6646377935027081145}
   - component: {fileID: -8762156485810512410}
+  - component: {fileID: 3275309130834627856}
   m_Layer: 0
   m_Name: DefeatField
   m_TagString: Untagged
@@ -95,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.2675767, z: 1}
+  m_Center: {x: 0, y: 0.13378832, z: 0}
 --- !u!54 &6646377935027081145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,3 +126,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4120832065f2adb41997375102e41c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isEnemyCollided: 0
+--- !u!65 &3275309130834627856
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196581020252198718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

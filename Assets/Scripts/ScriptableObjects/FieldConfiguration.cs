@@ -19,5 +19,13 @@ namespace ScriptableObjects
                 return gameField.GetComponent<MeshFilter>().sharedMesh.bounds.size.x * gameField.transform.localScale.x;
             }
         }
+        public Vector3 FieldBoundaries()
+        {
+            Vector3 boundaries = gameField.GetComponent<MeshFilter>().sharedMesh.bounds.size;
+            boundaries.x = boundaries.x * gameField.transform.localScale.x;
+            boundaries.y = boundaries.y * gameField.transform.localScale.y;
+            boundaries.z = boundaries.z * gameField.transform.localScale.z;
+            return boundaries;
+        }
     }
 }

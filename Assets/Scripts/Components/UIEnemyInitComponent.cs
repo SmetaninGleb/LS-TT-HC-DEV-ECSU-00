@@ -1,0 +1,8 @@
+﻿
+
+namespace Components
+{
+    struct UIEnemyInitComponent
+    {
+    }
+}

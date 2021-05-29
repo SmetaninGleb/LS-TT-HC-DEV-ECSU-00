@@ -8,15 +8,21 @@ namespace ScriptableObjects
         [SerializeField]
         private float _explosionRadius;
         [SerializeField]
-        private float _forceMultiplier;
+        private float _flightForceMultiplier;
         [SerializeField]
         private GameObject _projectileObject;
         [SerializeField]
+        private GameObject _uiProjectileObject;
+        [SerializeField]
         private int _damage;
+        [SerializeField]
+        private float _maxForceToObstacle;
 
         public float ExplosionRadius => _explosionRadius;
-        public float ForceMultiplier => _forceMultiplier;
+        public float FlightForceMultiplier => _flightForceMultiplier;
         public GameObject ProjectileObject => _projectileObject;
+        public GameObject UIProjectileObject => _uiProjectileObject;
         public int Damage => _damage;
+        public float MaxForceToObstacle => _maxForceToObstacle;
     }
 }

@@ -12,6 +12,11 @@ class ProjectileMonoBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        IsCollided = true;
+        if (collision.gameObject.TryGetComponent(out FieldMonoBehaviour fieldMono) 
+            || collision.gameObject.TryGetComponent(out EnemyMonoBehaviour enemyMono)
+            || collision.gameObject.TryGetComponent(out ObstacleMonoBehaviour obstacleMono))
+        {
+            IsCollided = true;
+        }
     }
 }

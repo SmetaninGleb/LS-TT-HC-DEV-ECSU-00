@@ -16,7 +16,10 @@ namespace Client {
         public DefeatFieldConfiguration defeatFieldConfiguration;
         public ShootingConfiguration shootingConfiguration;
         public ProjectileTypeContainer projectileTypeContainer;
+        public ObstacleTypesContainer obstacleTypeContainer;
+        public ObstacleSpawnConfiguration obstacleSpawnConfiguration;
         public UIConfiguration uiConfiguration;
+        public NavMeshConfiguration navMeshConfiguration;
 
         void Start () {
             // void can be switched to IEnumerator for support coroutines.
@@ -32,24 +35,29 @@ namespace Client {
                 // .Add (new TestSystem1 ())
                 // .Add (new TestSystem2 ())
                 .Add(new InitializeGameSystem())
-                .Add(new UIInitializeSystem())
                 .Add(new StartGameTrackerSystem())
                 .Add(new CreatingDefeatFieldSystem())
                 .Add(new CreatingFieldSystem())
+                .Add(new UIInitializeSystem())
                 .Add(new CreatingSpawnersSystem())
+                .Add(new InitializeNavMeshSystem())
+                .Add(new InitObstacleSpawnSystem())
                 .Add(new InitializeSpawnTimeTrackerSystem())
                 .Add(new UITapToStartGameSystem())
                 .Add(new DefeatCheckingSystem())
                 .Add(new SpawnSystem())
+                .Add(new UIHealthEnemySystem())
                 .Add(new MoveEnemySystem())
                 .Add(new TouchHandlerSystem())
                 .Add(new RayFromTouchSystem())
                 .Add(new RaycastHandlerSystem())
                 .Add(new ProjectileTypeOrderSystem())
+                .Add(new UINextProjectileSystem())
                 .Add(new ShootingSystem())
                 .Add(new ExplosionHandlerSystem())
-                .Add(new MakeExplosionDamageSystem())
+                .Add(new MakeExplosionSystem())
                 .Add(new ApplyingDamageSystem())
+                .Add(new ApplyingObstacleForceSystem())
                 .Add(new EnemyDeathSystem())
                 .Add(new ExplosionSystem())
                 .Add(new WinCheckingSystem())
@@ -59,6 +67,7 @@ namespace Client {
                 .Add(new EnemyOnWinSystem())
                 .Add(new EnemyOnDefeatSystem())
                 .Add(new EnemyOnFinishGameSystem())
+                .Add(new ObstacleOnFinishSystem())
                 .Add(new FinishGameTrackerSystem())
                 // register one-frame components (order is important), for example:
                 // .OneFrame<TestComponent1> ()
@@ -76,6 +85,9 @@ namespace Client {
                 .Inject(shootingConfiguration)
                 .Inject(projectileTypeContainer)
                 .Inject(uiConfiguration)
+                .Inject(navMeshConfiguration)
+                .Inject(obstacleTypeContainer)
+                .Inject(obstacleSpawnConfiguration)
                 .Init ();
         }
 

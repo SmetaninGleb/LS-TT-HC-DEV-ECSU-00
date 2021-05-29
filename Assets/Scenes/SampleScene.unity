@@ -160,7 +160,10 @@ MonoBehaviour:
   defeatFieldConfiguration: {fileID: 11400000, guid: c632c9cbf44816d4ca445d53f4e0f63c, type: 2}
   shootingConfiguration: {fileID: 11400000, guid: e08f61081ce05c74aa5cf59c7240d784, type: 2}
   projectileTypeContainer: {fileID: 11400000, guid: 43de91393a5313047a997609dd341c09, type: 2}
+  obstacleTypeContainer: {fileID: 11400000, guid: 9c855ac28667e78488c2c5a1ddcb4ddf, type: 2}
+  obstacleSpawnConfiguration: {fileID: 11400000, guid: 3b33e822bdf958347b4fa68e5a99a778, type: 2}
   uiConfiguration: {fileID: 11400000, guid: b69f5bdc8be950a43b373e9c965c5e5c, type: 2}
+  navMeshConfiguration: {fileID: 11400000, guid: 09ceb710bfa12a6498cb116d2430e6d7, type: 2}
 --- !u!4 &73504479
 Transform:
   m_ObjectHideFlags: 0

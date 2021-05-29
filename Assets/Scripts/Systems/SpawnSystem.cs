@@ -2,6 +2,7 @@
 using Leopotam.Ecs;
 using ScriptableObjects;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Systems
 {
@@ -47,12 +48,14 @@ namespace Systems
             GameObject newEnemyObject = GameObject.Instantiate(
                 newEnemyType.EnemyObject,
                 spawnPosition,
-                Quaternion.identity);
+                Quaternion.Euler(0f, -90f, 0f));
             newEnemyObject.GetComponent<EnemyMonoBehaviour>().Health = newEnemyType.HealthPoints;
             EcsEntity newEnemy = _world.NewEntity();
             ref EnemyComponent enemyComponent = ref newEnemy.Get<EnemyComponent>();
             enemyComponent.EnemyObject = newEnemyObject;
             enemyComponent.EnemyType = newEnemyType;
+            enemyComponent.EnemyNavMeshAgent = newEnemyObject.GetComponent<NavMeshAgent>();
+            enemyComponent.EnemyNavMeshAgent.speed = newEnemyType.EnemySpeed;
         }
     }
 }
