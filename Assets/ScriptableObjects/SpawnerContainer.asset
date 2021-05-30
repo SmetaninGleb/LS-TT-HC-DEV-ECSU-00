@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawners:
   - _spawnerType: {fileID: 11400000, guid: 8ebd7d6e579e98549b3db768ff2b64eb, type: 2}
-    _position: {x: -5, y: 1, z: -6}
+    _position: {x: -5, y: 0, z: -6}
   - _spawnerType: {fileID: 11400000, guid: 8ebd7d6e579e98549b3db768ff2b64eb, type: 2}
-    _position: {x: -10, y: 1, z: -3}
+    _position: {x: -10, y: 0, z: -3}
   - _spawnerType: {fileID: 11400000, guid: 8ebd7d6e579e98549b3db768ff2b64eb, type: 2}
-    _position: {x: -5, y: 1, z: 0}
+    _position: {x: -5, y: 0, z: 0}
   - _spawnerType: {fileID: 11400000, guid: 8ebd7d6e579e98549b3db768ff2b64eb, type: 2}
-    _position: {x: -10, y: 1, z: 3}
+    _position: {x: -10, y: 0, z: 3}
   - _spawnerType: {fileID: 11400000, guid: 8ebd7d6e579e98549b3db768ff2b64eb, type: 2}
-    _position: {x: -5, y: 1, z: 6}
+    _position: {x: -5, y: 0, z: 6}

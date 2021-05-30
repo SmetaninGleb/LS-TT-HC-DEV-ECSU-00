@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: NavMeshConfiguration
   m_EditorClassIdentifier: 
   _navMesh: {fileID: 1370923542236826265, guid: e2be85ee9d8b0b045ad99c21353554a9, type: 3}
+  _ignoreLayerName: NavMeshIgnore

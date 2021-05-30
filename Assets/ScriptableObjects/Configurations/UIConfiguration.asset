@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 4966279377268101528, guid: 6f6adac7921aa8a49b91b9ccbee7e537, type: 3}
   _planeDistanceCameraCanvas: 10
-  _uiProjectileCoordinates: {x: -350, y: -800, z: 3}
+  _uiProjectileCoordinates: {x: -400, y: 550, z: 3}
   _tapToStart: {fileID: 5525731104423691057, guid: b006be9101c7ecf48bcc91a8dc1e7acb, type: 3}
   _defeat: {fileID: 4454341862103345503, guid: ba655df2cc1b02740ac92d1a8ef73874, type: 3}
   _win: {fileID: 6060990208793045997, guid: 7a8f3f78d68439f4e857795779053236, type: 3}

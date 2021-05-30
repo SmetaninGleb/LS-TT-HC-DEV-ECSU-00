@@ -16,5 +16,6 @@ MonoBehaviour:
   _flightForceMultiplier: 55
   _projectileObject: {fileID: 8743398094962420964, guid: 26bfb9ea1afd719429f49aabbe462b97, type: 3}
   _uiProjectileObject: {fileID: 555015883790827293, guid: 72824a33f527c7047b036de3fb61e425, type: 3}
+  _explosionParticlesObject: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
   _damage: 70
-  _maxForceToObstacle: 15
+  _maxForceToObstacle: 12

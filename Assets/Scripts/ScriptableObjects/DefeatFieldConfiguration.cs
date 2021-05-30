@@ -8,16 +8,12 @@ namespace ScriptableObjects
         [SerializeField]
         private GameObject _defeatField;
         [SerializeField]
+        private float _defeatFieldLength;
+        [SerializeField]
         private Vector3 _position;
 
         public GameObject DefeatField => _defeatField;
         public Vector3 Position => _position;
-        public float DefeatFieldLength
-        {
-            get
-            {
-                return _defeatField.GetComponent<MeshFilter>().sharedMesh.bounds.size.x * _defeatField.transform.localScale.x;
-            }
-        }
+        public float DefeatFieldLength => _defeatFieldLength;
     }
 }

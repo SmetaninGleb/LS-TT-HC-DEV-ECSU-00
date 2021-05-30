@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9101f5d1f58a84e9ada005463ed718, type: 3}
   m_Name: MainEnemyType
   m_EditorClassIdentifier: 
-  _enemyObject: {fileID: 224934035383666693, guid: d49420474ac1ea94c955932080b0596a, type: 3}
+  _enemyObject: {fileID: 3091341250750352279, guid: ead4da15cdc219141b267fd6cdcdecc6, type: 3}
   _enemySpeed: 5
   _healthPoints: 100

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93fd909e4c876a4bbe5fcdc92745bc5, type: 3}
   m_Name: MainSpawner
   m_EditorClassIdentifier: 
-  _spawnerObject: {fileID: 4992815356823344578, guid: 76b48cb30d4ae1f4b8aedd0ba8810e5d, type: 3}
+  _spawnerObject: {fileID: 4148665246796574186, guid: 8d8cec94f9bc7c747b59c20e6d36224e, type: 3}

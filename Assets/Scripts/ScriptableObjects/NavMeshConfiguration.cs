@@ -8,8 +8,11 @@ namespace ScriptableObjects
     {
         [SerializeField]
         private GameObject _navMesh;
+        [SerializeField]
+        private string _ignoreLayerName;
 
 
         public GameObject NavMesh => _navMesh;
+        public string IgnoreLayerName => _ignoreLayerName;
     }
 }
