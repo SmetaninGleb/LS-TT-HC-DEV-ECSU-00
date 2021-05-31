@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d154d47016a1f2d4788a66c499622fbd, type: 3}
+  m_Script: {fileID: 11500000, guid: 233ce1bbf35df68449045f573f2dd8cd, type: 3}
   m_Name: DefeatFieldConfiguration
   m_EditorClassIdentifier: 
   _defeatField: {fileID: 7600878804622634221, guid: bb3e4f8371ea23e43abb27e421b1e01d, type: 3}

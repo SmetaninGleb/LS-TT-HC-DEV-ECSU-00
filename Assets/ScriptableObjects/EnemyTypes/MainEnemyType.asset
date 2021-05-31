@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a9101f5d1f58a84e9ada005463ed718, type: 3}
+  m_Script: {fileID: 11500000, guid: b6ec3bc7e9ab45b41a82eedda1b7fce9, type: 3}
   m_Name: MainEnemyType
   m_EditorClassIdentifier: 
   _enemyObject: {fileID: 3091341250750352279, guid: ead4da15cdc219141b267fd6cdcdecc6, type: 3}
-  _enemySpeed: 5
-  _healthPoints: 100
+  _enemySpeed: 4
+  _healthPoints: 150

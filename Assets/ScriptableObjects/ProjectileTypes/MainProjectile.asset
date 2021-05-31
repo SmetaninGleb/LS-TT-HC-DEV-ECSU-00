@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a947f36c564bf4eb98eecc1eece3cf, type: 3}
+  m_Script: {fileID: 11500000, guid: f27607a067463e744820b6331fa2c06a, type: 3}
   m_Name: MainProjectile
   m_EditorClassIdentifier: 
   _explosionRadius: 10
   _flightForceMultiplier: 55
   _projectileObject: {fileID: 8743398094962420964, guid: 26bfb9ea1afd719429f49aabbe462b97, type: 3}
-  _uiProjectileObject: {fileID: 555015883790827293, guid: 72824a33f527c7047b036de3fb61e425, type: 3}
+  _uiProjectileObject: {fileID: 6871918452617419594, guid: 47ecbba5beb2c6540a443fc1670ff406, type: 3}
   _explosionParticlesObject: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
-  _damage: 70
+  _damage: 90
   _maxForceToObstacle: 12

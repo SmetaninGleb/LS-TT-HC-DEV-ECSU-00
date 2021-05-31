@@ -64,6 +64,7 @@ namespace Client {
                 .Add(new ExplosionSystem())
                 .Add(new WinCheckingSystem())
                 .Add(new UIOnGameSystem())
+                .Add(new EndTimeTrackerSystem())
                 .Add(new UIWinSystem())
                 .Add(new UIDefeatSystem())
                 .Add(new EnemyOnWinSystem())

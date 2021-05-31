@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e329a90f15917a14fb1a735851fb3168, type: 3}
+  m_Script: {fileID: 11500000, guid: 37d132b4574b7ec4c9c2e6e20ea0c777, type: 3}
   m_Name: ProjectileTypeContainer
   m_EditorClassIdentifier: 
   _projectileTypes:

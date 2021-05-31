@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a67c07ede2182c74e8953dbd0711305f, type: 3}
+  m_Script: {fileID: 11500000, guid: ddfda741864c4fd4a8743471bc50868f, type: 3}
   m_Name: FieldConfiguration
   m_EditorClassIdentifier: 
   startFieldPosition: {x: 0, y: 0, z: 0}
